@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="shortcut icon" href="https://abs.twimg.com/favicons/twitter-pip.3.ico">
+    <title>Twitter-X Clone</title>
+</head>
+
+<body class="bg-black text-white">
+    <div class="flex container mx-auto my-4 ">
+        <div class="first w-10 md:w-[70%]">
+            <div class="logo invert my-4 sticky top-[16px]">
+                <svg viewBox="0 0 24 24" aria-hidden="true"
+                    class="w-8 m-auto r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-lrsllp r-1nao33i r-16y2uox r-8kz0gk">
+                    <g>
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+            <div class="sidebar flex justify-end sticky top-[56px]">
+                <ul class="flex flex-col text-2xl space-y-2 md:px-11 font-bold w-full">
+                    <li
+                        class="flex justify-start items-center gap-3 w-fit py-2 md:px-5 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full ">
+                        <span class="material-symbols-outlined text-3xl">
+                            home</span><span class="hidden md:block">Home</span>
+                    </li>
+                    <li
+                        class="flex justify-start items-center gap-3 w-fit py-2 md:px-5 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full ">
+                        <span class="material-symbols-outlined text-3xl">
+                            explore
+                        </span><span class="hidden md:block">Explore</span>
+                    </li>
+                    <li
+                        class="flex justify-start items-center gap-3 w-fit py-2 md:px-5 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full ">
+                        <span class="material-symbols-outlined text-3xl">
+                            notifications
+                        </span><span class="hidden md:block">Notification</span>
+                    </li>
+                    <li
+                        class="flex justify-start items-center gap-3 w-fit py-2 md:px-5 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full ">
+                        <span class="material-symbols-outlined text-3xl">
+                            message
+                        </span><span class="hidden md:block">Messages</span>
+                    </li>
+                    <li
+                        class="flex justify-start items-center gap-3 w-fit py-2 md:px-5 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full ">
+                        <span class="material-symbols-outlined text-3xl">
+                            radio_button_unchecked
+                        </span><span class="hidden md:block">Grok</span>
+                    </li>
+                    <li
+                        class="flex justify-start items-center gap-3 w-fit py-2 md:px-5 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full ">
+                        <span class="material-symbols-outlined text-3xl">
+                            list_alt
+                        </span><span class="hidden md:block">Lists</span>
+                    </li>
+                    <li
+                        class="flex justify-start items-center gap-3 w-fit py-2 md:px-5 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full ">
+                        <span class="material-symbols-outlined text-3xl">
+                            bookmark
+                        </span><span class="hidden md:block">Bookmark</span>
+                    </li>
+                    <li
+                        class="flex justify-start items-center gap-3 w-fit py-2 md:px-5 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full ">
+                        <span class="material-symbols-outlined text-3xl">
+                            communities
+                        </span><span class="hidden md:block">Communities</span>
+                    </li>
+                    <li
+                        class="flex justify-start items-center gap-3 w-fit py-2 md:px-5 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full ">
+                        <span class="material-symbols-outlined text-3xl">
+                            close
+                        </span><span class="hidden md:block">Premium</span>
+                    </li>
+                    <li
+                        class="flex justify-start items-center gap-3 w-fit py-2 md:px-5 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full ">
+                        <span class="material-symbols-outlined text-3xl">
+                            account_circle
+                        </span><span class="hidden md:block">Profile</span>
+                    </li>
+                    <li
+                        class="flex justify-start items-center gap-3 w-fit py-2 md:px-5 hover:bg-gray-800 hover:cursor-pointer hover:rounded-full ">
+                        <span class="material-symbols-outlined text-3xl">
+                            more
+                        </span><span class="hidden md:block">More</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="button hidden md:block flex justify-end items-center my-4 pr-4 pl-10 w-full sticky top-[729px]">
+                <button
+                    class="bg-[#1d9bf0] flex items-center justify-center py-3 px-32 w-52 text-2xl font-bold rounded-full">Follow</button>
+            </div>
+            <div class="userprofile w-10 md:w-full mt-10 md:pl-4 pr-3 sticky top-[804px]">
+                <div
+                    class="item md:p-3 md:pl-3 flex items-center md:gap-5 justify-end  md:mx-5 hover:bg-gray-800 cursor-pointer rounded-full w-fit">
+                    <div class="p1"><img class="md:w-12 md:h-12 w-9 h-9 rounded-full"
+                            src="https://pbs.twimg.com/profile_images/1584467930456428544/grf5g2Jb_normal.jpg"
+                            alt="vercel"></div>
+                    <div class="absolute left-[-1000px] md:static">
+                        <div>Vivek Raj</div>
+                        <div>@TechCode4U</div>
+                    </div>
+                    <div class="p3 text-2xl absolute left-[-1000px] md:static">...</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="second border-[1px] border-y-black border-x-gray-600 w-full">
+            <div class="top flex p-3 relative">
+                <div class="absolute w-16 h-1 bg-blue-500 bottom-0 left-[18.5%] z-10"></div>
+                <div class="cursor-pointer left w-1/2 flex justify-center font-bold text-lg ">For You</div>
+                <div class="cursor-pointer right w-1/2 flex justify-center font-bold text-lg ">Following</div>
+                <div class="cursor-pointer settings mx-2"><span class="material-symbols-outlined">
+                        settings
+                    </span></div>
+            </div>
+            <div class="h-[1px] w-full bg-gray-700"></div>
+            <div class="whatHapp flex gap-4 my-3">
+                <!-- Profile Image  -->
+                <div class="img m-2 w-16">
+                    <img class="rounded-full"
+                        src="https://pbs.twimg.com/profile_images/1584467930456428544/grf5g2Jb_bigger.jpg"
+                        alt="profile image">
+                </div>
+
+                <!-- Profile Search Dialogue Box , Globe Section and icon section  -->
+                <div class="w-full">
+                    <!-- Input Box  -->
+                    <input type="text" class="bg-black text-white text-xl h-7 my-3 outline-none w-full"
+                        placeholder="What is Happening?!">
+
+                    <!-- Globe Section  -->
+                    <div class="globe_section gap-2 flex items-center text-[#1d9bf0] my-3">
+                        <span class="material-symbols-outlined">
+                            globe_asia
+                        </span><span class="font-bold">Everyone can reply</span>
+                    </div>
+                    <div class="w-[90%] h-[0.2px] bg-gray-700 my-3"></div>
+
+                    <!-- Icons Section -->
+                    <div class="blue-icons flex gap-2 text-blue-400">
+                        <span class="material-symbols-outlined cursor-pointer text-[22px]">
+                            image
+                        </span>
+                        <span class="material-symbols-outlined cursor-pointer text-[22px]">
+                            gif_box
+                        </span>
+                        <span class="material-symbols-outlined cursor-pointer text-[22px]">
+                            dns
+                        </span>
+                        <span class="material-symbols-outlined cursor-pointer text-[22px]">
+                            mood
+                        </span>
+                        <span class="material-symbols-outlined cursor-pointer text-[22px]">
+                            calendar_month
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="h-[0.2px] bg-gray-600 my-3"></div>
+
+            <!-- Posts Section -->
+            <div class="posts">
+                <div class="post">
+                    <!-- Account Picture Section and Side Content Section  -->
+                    <div class="flex">
+                        <div class="image m-4"><img class="w-20 rounded-full"
+                                src="https://pbs.twimg.com/profile_images/1584467930456428544/grf5g2Jb_bigger.jpg"
+                                alt="profile picture"></div>
+
+                        <div class="content my-3">
+                            <!-- Top Account Name Display  -->
+                            <span class="font-bold hover:underline cursor-pointer text-white">Vivek Raj</span><span
+                                class="text-gray-500"> @vivekraj - 6h</span>
+
+                            <!-- Quotes Section  -->
+                            <div class="mx-4 ml-0 text-balance">
+                                "Master HTML & CSS.
+                                40+ Projects to Practice
+                                Grab it for FREE
+                                To get it:
+                                Like
+                                Reply " 👋"
+                                Follow me (so that I can DM)"</div>
+
+                            <!-- Image Section  -->
+                            <div class="postimg m-4 ml-0"><img class="rounded-lg"
+                                    src="https://pbs.twimg.com/media/GEXA3OlWcAAx4o1?format=jpg&name=medium" alt="">
+                            </div>
+
+                            <!-- like,comment and share icon section  -->
+                            <div class="icons flex justify-between ml-0 mx-3 mt-6">
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        favorite
+                                    </span><span class="text-lg">3.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        chat
+                                    </span><span class="text-lg">1k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        send
+                                    </span><span class="text-lg">0.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        equalizer
+                                    </span><span class="text-lg">4k</span>
+                                </div>
+                                <div class="subicons text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        bookmark
+                                    </span>
+                                    <span class="material-symbols-outlined">
+                                        upload
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[0.2px] bg-gray-600 my-3"></div>
+
+                <!-- Simply Replicated the Posts  -->
+                <div class="post">
+                    <!-- Account Picture Section and Side Content Section  -->
+                    <div class="flex">
+                        <div class="image m-4"><img class="w-20 rounded-full"
+                                src="https://pbs.twimg.com/profile_images/1584467930456428544/grf5g2Jb_bigger.jpg"
+                                alt="profile picture"></div>
+
+                        <div class="content my-3">
+                            <!-- Top Account Name Display  -->
+                            <span class="font-bold hover:underline cursor-pointer text-white">Vivek Raj</span><span
+                                class="text-gray-500"> @vivekraj - 2h</span>
+
+                            <!-- Quotes Section  -->
+                            <div class="mx-4 ml-0 text-balance">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic voluptate architecto, necessitatibus nulla assumenda incidunt placeat vel ratione delectus minima.</div>
+
+                            <!-- like,comment and share icon section  -->
+                            <div class="icons flex justify-between ml-0 mx-3 mt-6">
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        favorite
+                                    </span><span class="text-lg">3.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        chat
+                                    </span><span class="text-lg">1k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        send
+                                    </span><span class="text-lg">0.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        equalizer
+                                    </span><span class="text-lg">4k</span>
+                                </div>
+                                <div class="subicons text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        bookmark
+                                    </span>
+                                    <span class="material-symbols-outlined">
+                                        upload
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[0.2px] bg-gray-600 my-3"></div>
+                <div class="post">
+                    <!-- Account Picture Section and Side Content Section  -->
+                    <div class="flex">
+                        <div class="image m-4"><img class="w-20 rounded-full"
+                                src="https://pbs.twimg.com/profile_images/1584467930456428544/grf5g2Jb_bigger.jpg"
+                                alt="profile picture"></div>
+
+                        <div class="content my-3">
+                            <!-- Top Account Name Display  -->
+                            <span class="font-bold hover:underline cursor-pointer text-white">Vivek Raj</span><span
+                                class="text-gray-500"> @vivekraj - 6h</span>
+
+                            <!-- Quotes Section  -->
+                            <div class="mx-4 ml-0 text-balance">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, molestias maxime nobis totam eum id? Optio animi temporibus corporis libero cum provident officiis, nihil sed ab eos voluptates officia? Sequi, nisi in odio consequuntur saepe excepturi illo voluptate quam quis molestias quidem similique. Aperiam, sint voluptatem eveniet modi eaque qui?</div>
+
+                            <!-- Image Section  -->
+                            <div class="postimg m-4 ml-0"><img class="rounded-lg"
+                                    src="https://pbs.twimg.com/media/GEbtP1va8AAR08v?format=jpg&name=small" alt="">
+                            </div>
+
+                            <!-- like,comment and share icon section  -->
+                            <div class="icons flex justify-between ml-0 mx-3 mt-6">
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        favorite
+                                    </span><span class="text-lg">3.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        chat
+                                    </span><span class="text-lg">1k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        send
+                                    </span><span class="text-lg">0.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        equalizer
+                                    </span><span class="text-lg">4k</span>
+                                </div>
+                                <div class="subicons text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        bookmark
+                                    </span>
+                                    <span class="material-symbols-outlined">
+                                        upload
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[0.2px] bg-gray-600 my-3"></div>
+                <div class="post">
+                    <!-- Account Picture Section and Side Content Section  -->
+                    <div class="flex">
+                        <div class="image m-4"><img class="w-20 rounded-full"
+                                src="https://pbs.twimg.com/profile_images/1584467930456428544/grf5g2Jb_bigger.jpg"
+                                alt="profile picture"></div>
+
+                        <div class="content my-3">
+                            <!-- Top Account Name Display  -->
+                            <span class="font-bold hover:underline cursor-pointer text-white">Vivek Raj</span><span
+                                class="text-gray-500"> @vivekraj - 6h</span>
+
+                            <!-- Quotes Section  -->
+                            <div class="mx-4 ml-0 text-balance">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda earum esse quas, architecto ratione impedit veniam dolores molestias quasi culpa corrupti nisi cupiditate deleniti voluptatem voluptatibus sapiente. Commodi temporibus quasi quas id accusantium quos.</div>
+
+
+                            <!-- like,comment and share icon section  -->
+                            <div class="icons flex justify-between ml-0 mx-3 mt-6">
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        favorite
+                                    </span><span class="text-lg">3.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        chat
+                                    </span><span class="text-lg">1k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        send
+                                    </span><span class="text-lg">0.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        equalizer
+                                    </span><span class="text-lg">4k</span>
+                                </div>
+                                <div class="subicons text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        bookmark
+                                    </span>
+                                    <span class="material-symbols-outlined">
+                                        upload
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[0.2px] bg-gray-600 my-3"></div>
+                <div class="post">
+                    <!-- Account Picture Section and Side Content Section  -->
+                    <div class="flex">
+                        <div class="image m-4"><img class="w-20 rounded-full"
+                                src="https://pbs.twimg.com/profile_images/1584467930456428544/grf5g2Jb_bigger.jpg"
+                                alt="profile picture"></div>
+
+                        <div class="content my-3">
+                            <!-- Top Account Name Display  -->
+                            <span class="font-bold hover:underline cursor-pointer text-white">Vivek Raj</span><span
+                                class="text-gray-500"> @vivekraj - 6h</span>
+
+                            <!-- Quotes Section  -->
+                            <div class="mx-4 ml-0 text-balance">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda earum esse quas, architecto ratione impedit veniam dolores molestias quasi culpa corrupti nisi cupiditate deleniti voluptatem voluptatibus sapiente. Commodi temporibus quasi quas id accusantium quos.</div>
+
+
+                            <!-- like,comment and share icon section  -->
+                            <div class="icons flex justify-between ml-0 mx-3 mt-6">
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        favorite
+                                    </span><span class="text-lg">3.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        chat
+                                    </span><span class="text-lg">1k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        send
+                                    </span><span class="text-lg">0.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        equalizer
+                                    </span><span class="text-lg">4k</span>
+                                </div>
+                                <div class="subicons text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        bookmark
+                                    </span>
+                                    <span class="material-symbols-outlined">
+                                        upload
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[0.2px] bg-gray-600 my-3"></div>
+                <div class="post">
+                    <!-- Account Picture Section and Side Content Section  -->
+                    <div class="flex">
+                        <div class="image m-4"><img class="w-20 rounded-full"
+                                src="https://pbs.twimg.com/profile_images/1584467930456428544/grf5g2Jb_bigger.jpg"
+                                alt="profile picture"></div>
+
+                        <div class="content my-3">
+                            <!-- Top Account Name Display  -->
+                            <span class="font-bold hover:underline cursor-pointer text-white">Vivek Raj</span><span
+                                class="text-gray-500"> @vivekraj - 6h</span>
+
+                            <!-- Quotes Section  -->
+                            <div class="mx-4 ml-0 text-balance">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda earum esse quas, architecto ratione impedit veniam dolores molestias quasi culpa corrupti nisi cupiditate deleniti voluptatem voluptatibus sapiente. Commodi temporibus quasi quas id accusantium quos.</div>
+
+
+                            <!-- like,comment and share icon section  -->
+                            <div class="icons flex justify-between ml-0 mx-3 mt-6">
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        favorite
+                                    </span><span class="text-lg">3.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        chat
+                                    </span><span class="text-lg">1k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        send
+                                    </span><span class="text-lg">0.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        equalizer
+                                    </span><span class="text-lg">4k</span>
+                                </div>
+                                <div class="subicons text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        bookmark
+                                    </span>
+                                    <span class="material-symbols-outlined">
+                                        upload
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[0.2px] bg-gray-600 my-3"></div>
+                <div class="post">
+                    <!-- Account Picture Section and Side Content Section  -->
+                    <div class="flex">
+                        <div class="image m-4"><img class="w-20 rounded-full"
+                                src="https://pbs.twimg.com/profile_images/1584467930456428544/grf5g2Jb_bigger.jpg"
+                                alt="profile picture"></div>
+
+                        <div class="content my-3">
+                            <!-- Top Account Name Display  -->
+                            <span class="font-bold hover:underline cursor-pointer text-white">Vivek Raj</span><span
+                                class="text-gray-500"> @vivekraj - 6h</span>
+
+                            <!-- Quotes Section  -->
+                            <div class="mx-4 ml-0 text-balance">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda earum esse quas, architecto ratione impedit veniam dolores molestias quasi culpa corrupti nisi cupiditate deleniti voluptatem voluptatibus sapiente. Commodi temporibus quasi quas id accusantium quos.</div>
+
+
+                            <!-- like,comment and share icon section  -->
+                            <div class="icons flex justify-between ml-0 mx-3 mt-6">
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        favorite
+                                    </span><span class="text-lg">3.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        chat
+                                    </span><span class="text-lg">1k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        send
+                                    </span><span class="text-lg">0.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        equalizer
+                                    </span><span class="text-lg">4k</span>
+                                </div>
+                                <div class="subicons text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        bookmark
+                                    </span>
+                                    <span class="material-symbols-outlined">
+                                        upload
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[0.2px] bg-gray-600 my-3"></div>
+                <div class="post">
+                    <!-- Account Picture Section and Side Content Section  -->
+                    <div class="flex">
+                        <div class="image m-4"><img class="w-20 rounded-full"
+                                src="https://pbs.twimg.com/profile_images/1584467930456428544/grf5g2Jb_bigger.jpg"
+                                alt="profile picture"></div>
+
+                        <div class="content my-3">
+                            <!-- Top Account Name Display  -->
+                            <span class="font-bold hover:underline cursor-pointer text-white">Vivek Raj</span><span
+                                class="text-gray-500"> @vivekraj - 6h</span>
+
+                            <!-- Quotes Section  -->
+                            <div class="mx-4 ml-0 text-balance">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda earum esse quas, architecto ratione impedit veniam dolores molestias quasi culpa corrupti nisi cupiditate deleniti voluptatem voluptatibus sapiente. Commodi temporibus quasi quas id accusantium quos.</div>
+
+
+                            <!-- like,comment and share icon section  -->
+                            <div class="icons flex justify-between ml-0 mx-3 mt-6">
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        favorite
+                                    </span><span class="text-lg">3.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        chat
+                                    </span><span class="text-lg">1k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        send
+                                    </span><span class="text-lg">0.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        equalizer
+                                    </span><span class="text-lg">4k</span>
+                                </div>
+                                <div class="subicons text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        bookmark
+                                    </span>
+                                    <span class="material-symbols-outlined">
+                                        upload
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[0.2px] bg-gray-600 my-3"></div>
+                <div class="post">
+                    <!-- Account Picture Section and Side Content Section  -->
+                    <div class="flex">
+                        <div class="image m-4"><img class="w-20 rounded-full"
+                                src="https://pbs.twimg.com/profile_images/1584467930456428544/grf5g2Jb_bigger.jpg"
+                                alt="profile picture"></div>
+
+                        <div class="content my-3">
+                            <!-- Top Account Name Display  -->
+                            <span class="font-bold hover:underline cursor-pointer text-white">Vivek Raj</span><span
+                                class="text-gray-500"> @vivekraj - 6h</span>
+
+                            <!-- Quotes Section  -->
+                            <div class="mx-4 ml-0 text-balance">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda earum esse quas, architecto ratione impedit veniam dolores molestias quasi culpa corrupti nisi cupiditate deleniti voluptatem voluptatibus sapiente. Commodi temporibus quasi quas id accusantium quos.</div>
+
+
+                            <!-- like,comment and share icon section  -->
+                            <div class="icons flex justify-between ml-0 mx-3 mt-6">
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        favorite
+                                    </span><span class="text-lg">3.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        chat
+                                    </span><span class="text-lg">1k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        send
+                                    </span><span class="text-lg">0.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        equalizer
+                                    </span><span class="text-lg">4k</span>
+                                </div>
+                                <div class="subicons text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        bookmark
+                                    </span>
+                                    <span class="material-symbols-outlined">
+                                        upload
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[0.2px] bg-gray-600 my-3"></div>
+                <div class="post">
+                    <!-- Account Picture Section and Side Content Section  -->
+                    <div class="flex">
+                        <div class="image m-4"><img class="w-20 rounded-full"
+                                src="https://pbs.twimg.com/profile_images/1584467930456428544/grf5g2Jb_bigger.jpg"
+                                alt="profile picture"></div>
+
+                        <div class="content my-3">
+                            <!-- Top Account Name Display  -->
+                            <span class="font-bold hover:underline cursor-pointer text-white">Vivek Raj</span><span
+                                class="text-gray-500"> @vivekraj - 6h</span>
+
+                            <!-- Quotes Section  -->
+                            <div class="mx-4 ml-0 text-balance">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda earum esse quas, architecto ratione impedit veniam dolores molestias quasi culpa corrupti nisi cupiditate deleniti voluptatem voluptatibus sapiente. Commodi temporibus quasi quas id accusantium quos.</div>
+
+
+                            <!-- like,comment and share icon section  -->
+                            <div class="icons flex justify-between ml-0 mx-3 mt-6">
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        favorite
+                                    </span><span class="text-lg">3.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        chat
+                                    </span><span class="text-lg">1k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        send
+                                    </span><span class="text-lg">0.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        equalizer
+                                    </span><span class="text-lg">4k</span>
+                                </div>
+                                <div class="subicons text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        bookmark
+                                    </span>
+                                    <span class="material-symbols-outlined">
+                                        upload
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[0.2px] bg-gray-600 my-3"></div>
+                <div class="post">
+                    <!-- Account Picture Section and Side Content Section  -->
+                    <div class="flex">
+                        <div class="image m-4"><img class="w-20 rounded-full"
+                                src="https://pbs.twimg.com/profile_images/1584467930456428544/grf5g2Jb_bigger.jpg"
+                                alt="profile picture"></div>
+
+                        <div class="content my-3">
+                            <!-- Top Account Name Display  -->
+                            <span class="font-bold hover:underline cursor-pointer text-white">Vivek Raj</span><span
+                                class="text-gray-500"> @vivekraj - 6h</span>
+
+                            <!-- Quotes Section  -->
+                            <div class="mx-4 ml-0 text-balance">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda earum esse quas, architecto ratione impedit veniam dolores molestias quasi culpa corrupti nisi cupiditate deleniti voluptatem voluptatibus sapiente. Commodi temporibus quasi quas id accusantium quos.</div>
+
+
+                            <!-- like,comment and share icon section  -->
+                            <div class="icons flex justify-between ml-0 mx-3 mt-6">
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        favorite
+                                    </span><span class="text-lg">3.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        chat
+                                    </span><span class="text-lg">1k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        send
+                                    </span><span class="text-lg">0.5k</span>
+                                </div>
+                                <div
+                                    class="icon flex justify-center items-center gap-1 text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        equalizer
+                                    </span><span class="text-lg">4k</span>
+                                </div>
+                                <div class="subicons text-[17px] text-gray-500 cursor-pointer hover:text-gray-400">
+                                    <span class="material-symbols-outlined">
+                                        bookmark
+                                    </span>
+                                    <span class="material-symbols-outlined">
+                                        upload
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[0.2px] bg-gray-600 my-3"></div>
+
+
+            </div>
+        </div>
+
+        <div class="hird hidden md:block t w-full">
+            <div class="search my-0.5 m-2 sticky top-[16px]">
+                <input type="text" class="w-1/2 rounded-full bg-[#16181c] text-white font-bold px-4 py-2"
+                    placeholder="Search">
+            </div>
+            <div class="whatsHappening m-3 bg-[#16181c] w-1/2 py-5 rounded-xl space-y-3 sticky top-[65px]">
+                <h1 class="text-xl px-3 font-bold">Whats Happening ?</h1>
+                <div class="item py-3 px-3 hover:bg-gray-800 hover:cursor-pointer">
+                    <div class="text-sm text-gray-300">Trending in India</div>
+                    <div class="font-bold">#Software Engineers Google</div>
+                    <div class="text-sm text-gray-300">40.2k Posts</div>
+                </div>
+                <div class="item py-3 px-3 hover:bg-gray-800 hover:cursor-pointer">
+                    <div class="text-sm text-gray-300">Trending in India</div>
+                    <div class="font-bold">#Ram Mandir Adhoya</div>
+                    <div class="text-sm text-gray-300">200m Posts</div>
+                </div>
+                <div class="item py-3 px-3 hover:bg-gray-800 hover:cursor-pointer">
+                    <div class="text-sm text-gray-300">Trending in India</div>
+                    <div class="font-bold">#Sidharth Sukhla</div>
+                    <div class="text-sm text-gray-300">100.2k Posts</div>
+                </div>
+                <div class="item py-3 px-3 hover:bg-gray-800 hover:cursor-pointer">
+                    <div class="text-sm text-gray-300">Trending in India</div>
+                    <div class="font-bold">#Plane Crash</div>
+                    <div class="text-sm text-gray-300">10.5k Posts</div>
+                </div>
+            </div>
+
+            <div class="WhoToFollow m-3 bg-[#16181c] w-1/2 py-5 rounded-xl space-y-3 sticky top-[540px]">
+                <h1 class="text-xl px-3 font-bold">Who To Follow</h1>
+                <div
+                    class="user_profiles py-3 2xl:px-5 justify-between items-center hover:bg-gray-800 hover:cursor-pointer flex flex-col 2xl:flex-row w-full gap-4 2xl:items-center">
+                    <div class="profile_logo"><span class="material-symbols-outlined 2xl:text-3xl">
+                            account_circle
+                        </span></div>
+                    <div class="profile_info flex flex-col items-center justify-center text-sm 2xl:text-xl"><span
+                            class="font-bold text-white text-base">Nitin GatKari</span><span
+                            class="text-sm text-gray-500">@nitingatkari463</span></div>
+                    <div
+                        class="follow_btn bg-white text-black font-bold rounded-2xl w-16 flex items-center justify-center 2xl:text-base py-1 px-5 text-sm 2xl:px-9">
+                        <button>Follow</button>
+                    </div>
+                </div>
+
+                <div
+                    class="user_profiles py-3 2xl:px-5 justify-between items-center hover:bg-gray-800 hover:cursor-pointer flex flex-col 2xl:flex-row w-full gap-4 2xl:items-center">
+                    <div class="profile_logo"><span class="material-symbols-outlined 2xl:text-3xl">
+                            account_circle
+                        </span></div>
+                    <div class="profile_info flex flex-col items-center justify-center text-sm 2xl:text-xl"><span
+                            class="font-bold text-white text-base">Vivek Raj</span><span
+                            class="text-sm text-gray-500">@rajv0719</span></div>
+                    <div
+                        class="follow_btn bg-white text-black font-bold rounded-2xl w-16 flex items-center justify-center 2xl:text-base py-1 px-5 text-sm 2xl:px-9">
+                        <button>Follow</button>
+                    </div>
+                </div>
+
+                <div
+                    class="user_profiles py-3 2xl:px-5 justify-between items-center hover:bg-gray-800 hover:cursor-pointer flex flex-col 2xl:flex-row w-full gap-4 2xl:items-center">
+                    <div class="profile_logo"><span class="material-symbols-outlined 2xl:text-3xl">
+                            account_circle
+                        </span></div>
+                    <div class="profile_info flex flex-col items-center justify-center text-sm 2xl:text-xl"><span
+                            class="font-bold text-white text-base">Virat Kohli</span><span
+                            class="text-sm text-gray-500">@virat27428</span></div>
+                    <div
+                        class="follow_btn bg-white text-black font-bold rounded-2xl w-16 flex items-center justify-center 2xl:text-base py-1 px-5 text-sm 2xl:px-9">
+                        <button>Follow</button>
+                    </div>
+                </div>
+                <button class="text-blue-600 px-3 font-bold underline">Show More</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
